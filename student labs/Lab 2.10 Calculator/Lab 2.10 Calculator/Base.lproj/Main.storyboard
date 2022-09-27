@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,14 +18,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hZv-oT-jyv">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1o-11-921">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="273"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRl-1z-EaQ">
-                                                <rect key="frame" x="387" y="229" width="19" height="36"/>
+                                                <rect key="frame" x="387" y="228" width="19" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEZ-pn-m8v">
+                                                <rect key="frame" x="43" y="24" width="328" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muI-0u-uN8">
+                                                <rect key="frame" x="43" y="53" width="328" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wao-CX-vxH">
+                                                <rect key="frame" x="43" y="82" width="328" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI6-qI-3UU">
+                                                <rect key="frame" x="43" y="111" width="363" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -36,79 +65,103 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlc-dB-kfq">
-                                        <rect key="frame" x="0.0" y="273" width="414" height="545"/>
+                                        <rect key="frame" x="0.0" y="272" width="414" height="542"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="jZ8-Io-5ni">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="545"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="542"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="CQh-sx-8LI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="108.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="107.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc2-1n-gg0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="108.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="AC"/>
+                                                                <connections>
+                                                                    <action selector="optionButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNl-vr-Soq"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6w-SG-a9H">
-                                                                <rect key="frame" x="104" y="0.0" width="102.5" height="108.5"/>
+                                                                <rect key="frame" x="104" y="0.0" width="102.5" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="+/-"/>
+                                                                <connections>
+                                                                    <action selector="optionButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0aA-W6-KwE"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvQ-7c-ScY">
-                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="108.5"/>
+                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="%"/>
+                                                                <connections>
+                                                                    <action selector="optionButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ra-CI-Y0w"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3x-fj-tFj">
-                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="108.5"/>
+                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="107.5"/>
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="÷"/>
+                                                                <connections>
+                                                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="897-Ed-w5u"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="WWc-iQ-i7x">
-                                                        <rect key="frame" x="0.0" y="109.5" width="414" height="108"/>
+                                                        <rect key="frame" x="0.0" y="108.5" width="414" height="107.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqA-Wj-3oH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="108"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="7"/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWO-0i-YIs"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIE-1l-XzK">
-                                                                <rect key="frame" x="104" y="0.0" width="102.5" height="108"/>
+                                                                <rect key="frame" x="104" y="0.0" width="102.5" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="8"/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KA0-CV-xsB"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzZ-0r-i7w">
-                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="108"/>
+                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="9"/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ce-d8-Pxs"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48t-ws-pjv">
-                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="108"/>
+                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="107.5"/>
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="x"/>
+                                                                <connections>
+                                                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="af1-CG-iZP"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="3zb-rm-YZR">
-                                                        <rect key="frame" x="0.0" y="218.5" width="414" height="108"/>
+                                                        <rect key="frame" x="0.0" y="217" width="414" height="108"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W5-7B-Epx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="103" height="108"/>
@@ -116,6 +169,9 @@
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="4"/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a8G-Vv-nIe"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSE-Zb-cxi">
                                                                 <rect key="frame" x="104" y="0.0" width="102.5" height="108"/>
@@ -123,6 +179,9 @@
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="5"/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="abi-ux-ibf"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1x6-hS-TiS">
                                                                 <rect key="frame" x="207.5" y="0.0" width="103" height="108"/>
@@ -130,6 +189,9 @@
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="6"/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2TS-XN-DIn"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsM-Tv-eog">
                                                                 <rect key="frame" x="311.5" y="0.0" width="102.5" height="108"/>
@@ -137,65 +199,89 @@
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                                                <connections>
+                                                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iv2-8G-jUC"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-Ew-7EU">
-                                                        <rect key="frame" x="0.0" y="327.5" width="414" height="108.5"/>
+                                                        <rect key="frame" x="0.0" y="326" width="414" height="107.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptB-1C-YHd">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="108.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="103" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="1"/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HXb-jt-sdk"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyK-aX-iVX">
-                                                                <rect key="frame" x="104" y="0.0" width="102.5" height="108.5"/>
+                                                                <rect key="frame" x="104" y="0.0" width="102.5" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="2"/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rbE-2j-KO9"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMs-aB-4wk">
-                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="108.5"/>
+                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="3"/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ca5-Ch-Pmo"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYp-jJ-jC6">
-                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="108.5"/>
+                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="107.5"/>
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                                <connections>
+                                                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lt2-aa-xg1"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="EYu-dZ-wPA">
-                                                        <rect key="frame" x="0.0" y="437" width="414" height="108"/>
+                                                        <rect key="frame" x="0.0" y="434.5" width="414" height="107.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOe-5Q-9yH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="108"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="0"/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOY-N4-DBY"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q72-Dr-hkx">
-                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="108"/>
+                                                                <rect key="frame" x="207.5" y="0.0" width="103" height="107.5"/>
                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="."/>
+                                                                <connections>
+                                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ak4-T5-ZNp"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnJ-io-kTk">
-                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="108"/>
+                                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="107.5"/>
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="="/>
+                                                                <connections>
+                                                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gIf-LW-MVt"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -229,6 +315,32 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hZv-oT-jyv" secondAttribute="bottom" id="yHV-zY-nIb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="qI6-qI-3UU" id="Bb6-tz-FHb"/>
+                        <outlet property="calcView" destination="KRl-1z-EaQ" id="bP9-Tc-43y"/>
+                        <outlet property="operationLabel" destination="dEZ-pn-m8v" id="i4y-Sl-fSZ"/>
+                        <outlet property="val1" destination="muI-0u-uN8" id="skJ-kQ-IVc"/>
+                        <outlet property="val2" destination="wao-CX-vxH" id="2zF-tK-lTw"/>
+                        <outletCollection property="numberButtons" destination="vzZ-0r-i7w" collectionClass="NSMutableArray" id="FyQ-EP-E4e"/>
+                        <outletCollection property="numberButtons" destination="bIE-1l-XzK" collectionClass="NSMutableArray" id="KK4-oM-d5h"/>
+                        <outletCollection property="numberButtons" destination="zqA-Wj-3oH" collectionClass="NSMutableArray" id="nEw-3d-V1T"/>
+                        <outletCollection property="numberButtons" destination="1x6-hS-TiS" collectionClass="NSMutableArray" id="xZV-3X-xgP"/>
+                        <outletCollection property="numberButtons" destination="lSE-Zb-cxi" collectionClass="NSMutableArray" id="Pks-zc-fvr"/>
+                        <outletCollection property="numberButtons" destination="0W5-7B-Epx" collectionClass="NSMutableArray" id="QB6-aR-RiE"/>
+                        <outletCollection property="numberButtons" destination="mMs-aB-4wk" collectionClass="NSMutableArray" id="a1A-BK-Abe"/>
+                        <outletCollection property="numberButtons" destination="dyK-aX-iVX" collectionClass="NSMutableArray" id="Sry-dK-SzJ"/>
+                        <outletCollection property="numberButtons" destination="ptB-1C-YHd" collectionClass="NSMutableArray" id="aFc-Lz-Hwa"/>
+                        <outletCollection property="numberButtons" destination="bOe-5Q-9yH" collectionClass="NSMutableArray" id="cD1-5g-3Ik"/>
+                        <outletCollection property="numberButtons" destination="Q72-Dr-hkx" collectionClass="NSMutableArray" id="HdK-LD-4PV"/>
+                        <outletCollection property="operationButtons" destination="u3x-fj-tFj" collectionClass="NSMutableArray" id="eve-no-JqH"/>
+                        <outletCollection property="operationButtons" destination="48t-ws-pjv" collectionClass="NSMutableArray" id="ccA-jK-BEt"/>
+                        <outletCollection property="operationButtons" destination="nsM-Tv-eog" collectionClass="NSMutableArray" id="QQV-DH-5uW"/>
+                        <outletCollection property="operationButtons" destination="IYp-jJ-jC6" collectionClass="NSMutableArray" id="8U7-fv-ncX"/>
+                        <outletCollection property="operationButtons" destination="OnJ-io-kTk" collectionClass="NSMutableArray" id="zgI-lR-FWk"/>
+                        <outletCollection property="optionButtons" destination="Dc2-1n-gg0" collectionClass="NSMutableArray" id="poj-Ot-5ey"/>
+                        <outletCollection property="optionButtons" destination="R6w-SG-a9H" collectionClass="NSMutableArray" id="v4q-HL-tot"/>
+                        <outletCollection property="optionButtons" destination="vvQ-7c-ScY" collectionClass="NSMutableArray" id="8FP-CH-OlK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
