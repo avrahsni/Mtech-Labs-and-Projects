@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vC1-D3-Vw1">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tally_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="WRN-Kp-UTc">
+                                <rect key="frame" x="14" y="368" width="362" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="7Er-S6-CJ6"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="via-Qp-5Ev">
+                                <rect key="frame" x="157.66666666666666" y="347" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Counter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xb2-MW-bC3">
+                                <rect key="frame" x="115.33333333333333" y="233" width="159.33333333333337" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Starting Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plC-N5-3Uo">
+                                <rect key="frame" x="108.66666666666667" y="488" width="172.66666666666663" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wx-aI-QSc">
+                                <rect key="frame" x="161" y="582" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xp-vf-CJ6">
+                                <rect key="frame" x="168" y="603" width="54.333333333333343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dc-0U-sKC">
+                                <rect key="frame" x="133.66666666666666" y="735" width="122.99999999999997" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start Tallying"/>
+                                <connections>
+                                    <segue destination="Goy-Sg-cDh" kind="show" identifier="tally" id="uEg-C1-we5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Wx-aI-QSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J5B-Ru-4qd"/>
+                            <constraint firstItem="1Wx-aI-QSc" firstAttribute="top" secondItem="plC-N5-3Uo" secondAttribute="bottom" constant="60" id="JYC-xN-6Yc"/>
+                            <constraint firstItem="Xb2-MW-bC3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="NpY-As-73i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8dc-0U-sKC" secondAttribute="bottom" constant="40" id="O1c-En-nwL"/>
+                            <constraint firstItem="3xp-vf-CJ6" firstAttribute="top" secondItem="1Wx-aI-QSc" secondAttribute="bottom" id="Plf-iA-MSb"/>
+                            <constraint firstItem="via-Qp-5Ev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pwe-7u-hHe"/>
+                            <constraint firstItem="Xb2-MW-bC3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bb4-ph-dup"/>
+                            <constraint firstItem="plC-N5-3Uo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dVz-es-iZm"/>
+                            <constraint firstItem="WRN-Kp-UTc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="iNe-aD-Xbd"/>
+                            <constraint firstItem="WRN-Kp-UTc" firstAttribute="top" secondItem="via-Qp-5Ev" secondAttribute="bottom" id="jVn-PT-r9f"/>
+                            <constraint firstItem="3xp-vf-CJ6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jt8-Qd-tZJ"/>
+                            <constraint firstItem="WRN-Kp-UTc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n9d-5N-lRr"/>
+                            <constraint firstItem="8dc-0U-sKC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qhG-Gl-HQS"/>
+                            <constraint firstItem="plC-N5-3Uo" firstAttribute="top" secondItem="WRN-Kp-UTc" secondAttribute="bottom" constant="90" id="uoI-Wu-kbO"/>
+                            <constraint firstItem="via-Qp-5Ev" firstAttribute="top" secondItem="Xb2-MW-bC3" secondAttribute="bottom" constant="80" id="x5m-cU-MSP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="6bw-3V-Ets"/>
+                    <connections>
+                        <outlet property="countByLabel" destination="via-Qp-5Ev" id="8XM-x0-xIp"/>
+                        <outlet property="counterNameField" destination="Xb2-MW-bC3" id="GjS-22-hOj"/>
+                        <outlet property="counterSlider" destination="WRN-Kp-UTc" id="BHB-fu-5Vk"/>
+                        <outlet property="resetToField" destination="3xp-vf-CJ6" id="B2m-Eq-7q7"/>
+                        <outlet property="startingNumberField" destination="plC-N5-3Uo" id="tax-qp-r3L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.1538461538462" y="3.5545023696682461"/>
+        </scene>
+        <!--Tally View Controller-->
+        <scene sceneID="IEu-Qs-h1W">
+            <objects>
+                <viewController id="Goy-Sg-cDh" customClass="TallyViewController" customModule="Tally_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fdc-w7-dkF">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIj-sG-Mha">
+                                <rect key="frame" x="140.66666666666666" y="168" width="109" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-Ws-NjG">
+                                <rect key="frame" x="16" y="261" width="358" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="PRk-8v-cJu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sX4-NF-MJA">
+                                <rect key="frame" x="223" y="401" width="73" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Tally">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tallyButtonPressed:" destination="Goy-Sg-cDh" eventType="touchUpInside" id="uSS-Wp-36s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVn-dW-PGk">
+                                <rect key="frame" x="94" y="401" width="87" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Reset">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="Goy-Sg-cDh" eventType="touchUpInside" id="OpX-b8-foh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0vE-vV-zfC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nVn-dW-PGk" firstAttribute="centerY" secondItem="Fdc-w7-dkF" secondAttribute="centerY" id="0Hy-Jx-Ner"/>
+                            <constraint firstItem="cIj-sG-Mha" firstAttribute="top" secondItem="0vE-vV-zfC" secondAttribute="top" constant="25" id="6tP-Wg-gNs"/>
+                            <constraint firstItem="sX4-NF-MJA" firstAttribute="leading" secondItem="nVn-dW-PGk" secondAttribute="trailing" constant="42" id="AuM-B3-Hfx"/>
+                            <constraint firstItem="nVn-dW-PGk" firstAttribute="centerX" secondItem="Fdc-w7-dkF" secondAttribute="centerX" constant="-57.5" id="UTb-81-6Ba"/>
+                            <constraint firstItem="cIj-sG-Mha" firstAttribute="centerX" secondItem="Fdc-w7-dkF" secondAttribute="centerX" id="V0y-wi-TuR"/>
+                            <constraint firstItem="sX4-NF-MJA" firstAttribute="centerY" secondItem="nVn-dW-PGk" secondAttribute="centerY" id="X6y-qG-Q1x"/>
+                            <constraint firstItem="s4P-Ws-NjG" firstAttribute="top" secondItem="cIj-sG-Mha" secondAttribute="bottom" constant="60" id="XBy-gc-NG4"/>
+                            <constraint firstItem="s4P-Ws-NjG" firstAttribute="centerX" secondItem="cIj-sG-Mha" secondAttribute="centerX" id="ZYU-eb-34X"/>
+                            <constraint firstItem="sX4-NF-MJA" firstAttribute="centerX" secondItem="Fdc-w7-dkF" secondAttribute="centerX" constant="64.5" id="baQ-nE-MQL"/>
+                            <constraint firstItem="s4P-Ws-NjG" firstAttribute="leading" secondItem="Fdc-w7-dkF" secondAttribute="leadingMargin" id="jrf-tf-duu"/>
+                            <constraint firstItem="sX4-NF-MJA" firstAttribute="centerY" secondItem="Fdc-w7-dkF" secondAttribute="centerY" id="lM1-eo-I0Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PSv-OX-MLc"/>
+                    <connections>
+                        <outlet property="CounterNumber" destination="s4P-Ws-NjG" id="nKb-Q4-7RW"/>
+                        <outlet property="counterNameLabel" destination="cIj-sG-Mha" id="Vry-K7-ZAG"/>
+                        <outlet property="resetButton" destination="nVn-dW-PGk" id="VWq-Yh-SKK"/>
+                        <outlet property="tallyButton" destination="sX4-NF-MJA" id="4UF-6R-Ajp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayE-L8-9C5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956.9230769230769" y="3.5545023696682461"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VUT-Ju-Zlx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vC1-D3-Vw1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="dII-Ng-nuf">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BMz-21-GcP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9B-N0-atg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.92307692307691" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
