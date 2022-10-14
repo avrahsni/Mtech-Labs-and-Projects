@@ -21,6 +21,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var maidenNameTextField: UITextField!
     @IBOutlet weak var usernameNoMatch: UITextView!
     @IBOutlet weak var passwordNoMatch: UITextView!
+    @IBOutlet weak var maidenNameError: UILabel!
+    
     
     struct user {
         var username = ""
@@ -35,7 +37,7 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         usernameNoMatch.isHidden = true
         passwordNoMatch.isHidden = true
-        // Do any additional setup after loading the view.
+        maidenNameError.isHidden = true
     }
     
     func checkUsername() -> Bool {
@@ -84,11 +86,21 @@ class RegisterViewController: UIViewController {
         return true
     }
     
+    func checkMaidenName() -> Bool{
+        maidenNameError.isHidden = true
+        guard let maidenName = maidenNameTextField.text, maidenName != "" else {
+            maidenNameError.text = "Enter A Maiden Name"
+            maidenNameError.isHidden = false
+            return false
+        }
+        return true
+    }
     
     func checkFields() -> Bool {
         checkPassword()
         checkUsername()
-        guard checkPassword(), checkUsername() else {return false}
+        checkMaidenName()
+        guard checkPassword(), checkUsername(), checkMaidenName() else {return false}
         return true
     }
 
