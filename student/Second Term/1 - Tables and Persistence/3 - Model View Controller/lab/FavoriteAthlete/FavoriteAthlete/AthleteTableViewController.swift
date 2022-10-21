@@ -6,7 +6,7 @@ class AthleteTableViewController: UITableViewController {
         static let athleteCell = "AthleteCell"
     }
 
-    var athletes: [Athlete] = []
+    var athletes: [Athlete] = [/*Athlete(name: "Ronaldo", age: 30, league: "hello", team: "world")*/]
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,4 +31,37 @@ class AthleteTableViewController: UITableViewController {
         
         return cell
     }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        guard let athleteFormViewController = segue.source as? AthleteFormViewController,
+              let athlete = athleteFormViewController.athlete
+        else {
+            return
+        }
+        
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            athletes[selectedIndexPath.row] = athlete
+        } else {
+            athletes.append(athlete)
+        }
+        
+    }
+    
+    @IBSegueAction func addAtheleteAction(_ coder: NSCoder) -> AthleteFormViewController? {
+        
+        return AthleteFormViewController(coder: coder, athlete: nil)
+    }
+    
+    @IBSegueAction func editAthleteAction(_ coder: NSCoder, sender: Any?) -> AthleteFormViewController? {
+        let athleteToEdit: Athlete?
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+            athleteToEdit = athletes[indexPath.row]
+        }
+        else {
+            athleteToEdit = nil
+        }
+        return AthleteFormViewController(coder: coder, athlete: athleteToEdit)
+    }
+    
+    
 }
