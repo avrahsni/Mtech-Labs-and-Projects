@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		046EF12828FEEA7E00881D2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF12728FEEA7E00881D2C /* AppDelegate.swift */; };
+		046EF12A28FEEA7E00881D2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF12928FEEA7E00881D2C /* SceneDelegate.swift */; };
+		046EF12F28FEEA7E00881D2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046EF12D28FEEA7E00881D2C /* Main.storyboard */; };
+		046EF13128FEEA7F00881D2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046EF13028FEEA7F00881D2C /* Assets.xcassets */; };
+		046EF13428FEEA7F00881D2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046EF13228FEEA7F00881D2C /* LaunchScreen.storyboard */; };
+		046EF13F28FEEA8000881D2C /* SquirrelTable_Emoji_Dict_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF13E28FEEA8000881D2C /* SquirrelTable_Emoji_Dict_Tests.swift */; };
+		046EF14928FEEA8000881D2C /* SquirrelTable_Emoji_Dict_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF14828FEEA8000881D2C /* SquirrelTable_Emoji_Dict_UITests.swift */; };
+		046EF14B28FEEA8000881D2C /* SquirrelTable_Emoji_Dict_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF14A28FEEA8000881D2C /* SquirrelTable_Emoji_Dict_UITestsLaunchTests.swift */; };
+		046EF15828FEEC5500881D2C /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF15728FEEC5500881D2C /* Emoji.swift */; };
+		046EF15C28FEEDA600881D2C /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046EF15B28FEEDA600881D2C /* EmojiTableViewController.swift */; };
+		049FE18E2900462B003F34A0 /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FE18D2900462B003F34A0 /* EmojiTableViewCell.swift */; };
+		049FE1902900546A003F34A0 /* EmojiAdderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FE18F2900546A003F34A0 /* EmojiAdderTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		046EF13B28FEEA8000881D2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 046EF11C28FEEA7E00881D2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 046EF12328FEEA7E00881D2C;
+			remoteInfo = "SquirrelTable(Emoji Dict)";
+		};
+		046EF14528FEEA8000881D2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 046EF11C28FEEA7E00881D2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 046EF12328FEEA7E00881D2C;
+			remoteInfo = "SquirrelTable(Emoji Dict)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		046EF12428FEEA7E00881D2C /* SquirrelTable(Emoji Dict).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SquirrelTable(Emoji Dict).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		046EF12728FEEA7E00881D2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		046EF12928FEEA7E00881D2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		046EF12E28FEEA7E00881D2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		046EF13028FEEA7F00881D2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		046EF13328FEEA7F00881D2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		046EF13528FEEA7F00881D2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046EF13A28FEEA8000881D2C /* SquirrelTable(Emoji Dict)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SquirrelTable(Emoji Dict)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		046EF13E28FEEA8000881D2C /* SquirrelTable_Emoji_Dict_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquirrelTable_Emoji_Dict_Tests.swift; sourceTree = "<group>"; };
+		046EF14428FEEA8000881D2C /* SquirrelTable(Emoji Dict)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SquirrelTable(Emoji Dict)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		046EF14828FEEA8000881D2C /* SquirrelTable_Emoji_Dict_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquirrelTable_Emoji_Dict_UITests.swift; sourceTree = "<group>"; };
+		046EF14A28FEEA8000881D2C /* SquirrelTable_Emoji_Dict_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquirrelTable_Emoji_Dict_UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		046EF15728FEEC5500881D2C /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		046EF15B28FEEDA600881D2C /* EmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
+		049FE18D2900462B003F34A0 /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
+		049FE18F2900546A003F34A0 /* EmojiAdderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiAdderTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046EF12128FEEA7E00881D2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EF13728FEEA8000881D2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EF14128FEEA8000881D2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		046EF11B28FEEA7E00881D2C = {
+			isa = PBXGroup;
+			children = (
+				046EF12628FEEA7E00881D2C /* SquirrelTable(Emoji Dict) */,
+				046EF13D28FEEA8000881D2C /* SquirrelTable(Emoji Dict)Tests */,
+				046EF14728FEEA8000881D2C /* SquirrelTable(Emoji Dict)UITests */,
+				046EF12528FEEA7E00881D2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		046EF12528FEEA7E00881D2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046EF12428FEEA7E00881D2C /* SquirrelTable(Emoji Dict).app */,
+				046EF13A28FEEA8000881D2C /* SquirrelTable(Emoji Dict)Tests.xctest */,
+				046EF14428FEEA8000881D2C /* SquirrelTable(Emoji Dict)UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		046EF12628FEEA7E00881D2C /* SquirrelTable(Emoji Dict) */ = {
+			isa = PBXGroup;
+			children = (
+				046EF12728FEEA7E00881D2C /* AppDelegate.swift */,
+				046EF12928FEEA7E00881D2C /* SceneDelegate.swift */,
+				046EF12D28FEEA7E00881D2C /* Main.storyboard */,
+				049FE18F2900546A003F34A0 /* EmojiAdderTableViewController.swift */,
+				049FE18D2900462B003F34A0 /* EmojiTableViewCell.swift */,
+				046EF15B28FEEDA600881D2C /* EmojiTableViewController.swift */,
+				046EF15728FEEC5500881D2C /* Emoji.swift */,
+				046EF13028FEEA7F00881D2C /* Assets.xcassets */,
+				046EF13228FEEA7F00881D2C /* LaunchScreen.storyboard */,
+				046EF13528FEEA7F00881D2C /* Info.plist */,
+			);
+			path = "SquirrelTable(Emoji Dict)";
+			sourceTree = "<group>";
+		};
+		046EF13D28FEEA8000881D2C /* SquirrelTable(Emoji Dict)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				046EF13E28FEEA8000881D2C /* SquirrelTable_Emoji_Dict_Tests.swift */,
+			);
+			path = "SquirrelTable(Emoji Dict)Tests";
+			sourceTree = "<group>";
+		};
+		046EF14728FEEA8000881D2C /* SquirrelTable(Emoji Dict)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				046EF14828FEEA8000881D2C /* SquirrelTable_Emoji_Dict_UITests.swift */,
+				046EF14A28FEEA8000881D2C /* SquirrelTable_Emoji_Dict_UITestsLaunchTests.swift */,
+			);
+			path = "SquirrelTable(Emoji Dict)UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046EF12328FEEA7E00881D2C /* SquirrelTable(Emoji Dict) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046EF14E28FEEA8000881D2C /* Build configuration list for PBXNativeTarget "SquirrelTable(Emoji Dict)" */;
+			buildPhases = (
+				046EF12028FEEA7E00881D2C /* Sources */,
+				046EF12128FEEA7E00881D2C /* Frameworks */,
+				046EF12228FEEA7E00881D2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SquirrelTable(Emoji Dict)";
+			productName = "SquirrelTable(Emoji Dict)";
+			productReference = 046EF12428FEEA7E00881D2C /* SquirrelTable(Emoji Dict).app */;
+			productType = "com.apple.product-type.application";
+		};
+		046EF13928FEEA8000881D2C /* SquirrelTable(Emoji Dict)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046EF15128FEEA8000881D2C /* Build configuration list for PBXNativeTarget "SquirrelTable(Emoji Dict)Tests" */;
+			buildPhases = (
+				046EF13628FEEA8000881D2C /* Sources */,
+				046EF13728FEEA8000881D2C /* Frameworks */,
+				046EF13828FEEA8000881D2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				046EF13C28FEEA8000881D2C /* PBXTargetDependency */,
+			);
+			name = "SquirrelTable(Emoji Dict)Tests";
+			productName = "SquirrelTable(Emoji Dict)Tests";
+			productReference = 046EF13A28FEEA8000881D2C /* SquirrelTable(Emoji Dict)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		046EF14328FEEA8000881D2C /* SquirrelTable(Emoji Dict)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046EF15428FEEA8000881D2C /* Build configuration list for PBXNativeTarget "SquirrelTable(Emoji Dict)UITests" */;
+			buildPhases = (
+				046EF14028FEEA8000881D2C /* Sources */,
+				046EF14128FEEA8000881D2C /* Frameworks */,
+				046EF14228FEEA8000881D2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				046EF14628FEEA8000881D2C /* PBXTargetDependency */,
+			);
+			name = "SquirrelTable(Emoji Dict)UITests";
+			productName = "SquirrelTable(Emoji Dict)UITests";
+			productReference = 046EF14428FEEA8000881D2C /* SquirrelTable(Emoji Dict)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		046EF11C28FEEA7E00881D2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					046EF12328FEEA7E00881D2C = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					046EF13928FEEA8000881D2C = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 046EF12328FEEA7E00881D2C;
+					};
+					046EF14328FEEA8000881D2C = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 046EF12328FEEA7E00881D2C;
+					};
+				};
+			};
+			buildConfigurationList = 046EF11F28FEEA7E00881D2C /* Build configuration list for PBXProject "SquirrelTable(Emoji Dict)" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 046EF11B28FEEA7E00881D2C;
+			productRefGroup = 046EF12528FEEA7E00881D2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046EF12328FEEA7E00881D2C /* SquirrelTable(Emoji Dict) */,
+				046EF13928FEEA8000881D2C /* SquirrelTable(Emoji Dict)Tests */,
+				046EF14328FEEA8000881D2C /* SquirrelTable(Emoji Dict)UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		046EF12228FEEA7E00881D2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046EF13428FEEA7F00881D2C /* LaunchScreen.storyboard in Resources */,
+				046EF13128FEEA7F00881D2C /* Assets.xcassets in Resources */,
+				046EF12F28FEEA7E00881D2C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EF13828FEEA8000881D2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EF14228FEEA8000881D2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046EF12028FEEA7E00881D2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046EF15C28FEEDA600881D2C /* EmojiTableViewController.swift in Sources */,
+				049FE1902900546A003F34A0 /* EmojiAdderTableViewController.swift in Sources */,
+				046EF15828FEEC5500881D2C /* Emoji.swift in Sources */,
+				049FE18E2900462B003F34A0 /* EmojiTableViewCell.swift in Sources */,
+				046EF12828FEEA7E00881D2C /* AppDelegate.swift in Sources */,
+				046EF12A28FEEA7E00881D2C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EF13628FEEA8000881D2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046EF13F28FEEA8000881D2C /* SquirrelTable_Emoji_Dict_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046EF14028FEEA8000881D2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046EF14928FEEA8000881D2C /* SquirrelTable_Emoji_Dict_UITests.swift in Sources */,
+				046EF14B28FEEA8000881D2C /* SquirrelTable_Emoji_Dict_UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		046EF13C28FEEA8000881D2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 046EF12328FEEA7E00881D2C /* SquirrelTable(Emoji Dict) */;
+			targetProxy = 046EF13B28FEEA8000881D2C /* PBXContainerItemProxy */;
+		};
+		046EF14628FEEA8000881D2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 046EF12328FEEA7E00881D2C /* SquirrelTable(Emoji Dict) */;
+			targetProxy = 046EF14528FEEA8000881D2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		046EF12D28FEEA7E00881D2C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046EF12E28FEEA7E00881D2C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		046EF13228FEEA7F00881D2C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046EF13328FEEA7F00881D2C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		046EF14C28FEEA8000881D2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		046EF14D28FEEA8000881D2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		046EF14F28FEEA8000881D2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PN5QQ6G334;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SquirrelTable(Emoji Dict)/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "I-got-this.SquirrelTable-Emoji-Dict-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		046EF15028FEEA8000881D2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PN5QQ6G334;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SquirrelTable(Emoji Dict)/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "I-got-this.SquirrelTable-Emoji-Dict-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		046EF15228FEEA8000881D2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PN5QQ6G334;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "I-got-this.SquirrelTable-Emoji-Dict-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SquirrelTable(Emoji Dict).app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SquirrelTable(Emoji Dict)";
+			};
+			name = Debug;
+		};
+		046EF15328FEEA8000881D2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PN5QQ6G334;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "I-got-this.SquirrelTable-Emoji-Dict-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SquirrelTable(Emoji Dict).app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SquirrelTable(Emoji Dict)";
+			};
+			name = Release;
+		};
+		046EF15528FEEA8000881D2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PN5QQ6G334;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "I-got-this.SquirrelTable-Emoji-Dict-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SquirrelTable(Emoji Dict)";
+			};
+			name = Debug;
+		};
+		046EF15628FEEA8000881D2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PN5QQ6G334;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "I-got-this.SquirrelTable-Emoji-Dict-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SquirrelTable(Emoji Dict)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046EF11F28FEEA7E00881D2C /* Build configuration list for PBXProject "SquirrelTable(Emoji Dict)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046EF14C28FEEA8000881D2C /* Debug */,
+				046EF14D28FEEA8000881D2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046EF14E28FEEA8000881D2C /* Build configuration list for PBXNativeTarget "SquirrelTable(Emoji Dict)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046EF14F28FEEA8000881D2C /* Debug */,
+				046EF15028FEEA8000881D2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046EF15128FEEA8000881D2C /* Build configuration list for PBXNativeTarget "SquirrelTable(Emoji Dict)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046EF15228FEEA8000881D2C /* Debug */,
+				046EF15328FEEA8000881D2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046EF15428FEEA8000881D2C /* Build configuration list for PBXNativeTarget "SquirrelTable(Emoji Dict)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046EF15528FEEA8000881D2C /* Debug */,
+				046EF15628FEEA8000881D2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 046EF11C28FEEA7E00881D2C /* Project object */;
+}
