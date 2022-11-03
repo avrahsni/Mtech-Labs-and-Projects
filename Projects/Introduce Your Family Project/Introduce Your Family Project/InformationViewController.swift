@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol familyMember: AnyObject {
+    var familyMember: person { get set }
+}
+
 class InformationViewController: UIViewController {
+//    var familyMember = FamilyTableViewController.familyMember
+    
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -16,6 +22,8 @@ class InformationViewController: UIViewController {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var birthMonthLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
+    
+    weak var delegate: familyMember?
     
     struct tempPerson {
         var name: String
@@ -36,10 +44,12 @@ class InformationViewController: UIViewController {
             self.image = image
         }
     }
-    var personInstance = tempPerson(name: "", age: 0, relation: "", occupation: "", gender: "", birthMonth: "", image: nil)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let personInstance = delegate!.familyMember
         
         nameLabel.text = personInstance.name
         relationLabel.text! += personInstance.relation
