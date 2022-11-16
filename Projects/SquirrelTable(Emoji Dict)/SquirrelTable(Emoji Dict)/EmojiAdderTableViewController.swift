@@ -58,8 +58,7 @@ class EmojiAdderTableViewController: UITableViewController {
         let nameText = nameTextField.text ?? ""
         let descriptionText = descriptionTextField.text ?? ""
         let usageText = usageTextField.text ?? ""
-        saveButton.isEnabled = containsSingleEmoji(symbolTextField)
-        !nameText.isEmpty && !descriptionText.isEmpty && !usageText.isEmpty
+        saveButton.isEnabled = containsSingleEmoji(symbolTextField) && !nameText.isEmpty && !descriptionText.isEmpty && !usageText.isEmpty
     }
     
     

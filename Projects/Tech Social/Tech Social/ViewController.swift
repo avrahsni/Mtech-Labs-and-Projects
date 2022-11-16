@@ -13,9 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var bioTextView: UITextView!
-    @IBOutlet weak var postImageView: UIImageView!
-    @IBOutlet weak var posterName: UILabel!
-    @IBOutlet weak var postDescription: UILabel!
     
     
     struct post {
@@ -56,12 +53,15 @@ class ViewController: UIViewController {
     }
     
     func loadPost() {
-        print(posts[0].poster)
-        posterName.isEnabled = true
-        posterName.isHidden = false
-        postImageView.image = posts[0].image
-        posterName.text = posts[0].poster
-        postDescription.text = "\(username): \(posts[0].description)"
+//        print(posts[0].poster)
+//        posterName.isEnabled = true
+//        posterName.isHidden = false
+//        postImageView.image = posts[0].image
+//        posterName.text = posts[0].poster
+//        postDescription.text = "\(username): \(posts[0].description)"
     }
+    
+    
+    
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4634CB80291414E300BF7841 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4634CB7F291414E300BF7841 /* Posts.swift */; };
+		4634CB82291419D600BF7841 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4634CB81291419D600BF7841 /* PostsTableViewController.swift */; };
+		4634CB842914210100BF7841 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4634CB832914210100BF7841 /* PostTableViewCell.swift */; };
 		46BCB90028EC7D2900735244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BCB8FF28EC7D2900735244 /* AppDelegate.swift */; };
 		46BCB90228EC7D2900735244 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BCB90128EC7D2900735244 /* SceneDelegate.swift */; };
 		46BCB90428EC7D2900735244 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BCB90328EC7D2900735244 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4634CB7F291414E300BF7841 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		4634CB81291419D600BF7841 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		4634CB832914210100BF7841 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		46BCB8FC28EC7D2900735244 /* Tech Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tech Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46BCB8FF28EC7D2900735244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46BCB90128EC7D2900735244 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +65,9 @@
 				46BCB8FF28EC7D2900735244 /* AppDelegate.swift */,
 				46BCB90128EC7D2900735244 /* SceneDelegate.swift */,
 				46BCB90328EC7D2900735244 /* ViewController.swift */,
+				4634CB7F291414E300BF7841 /* Posts.swift */,
+				4634CB81291419D600BF7841 /* PostsTableViewController.swift */,
+				4634CB832914210100BF7841 /* PostTableViewCell.swift */,
 				46BCB90528EC7D2900735244 /* Main.storyboard */,
 				46BCB90828EC7D2B00735244 /* Assets.xcassets */,
 				46BCB90A28EC7D2B00735244 /* LaunchScreen.storyboard */,
@@ -141,6 +150,9 @@
 				46BCB90428EC7D2900735244 /* ViewController.swift in Sources */,
 				46BCB90028EC7D2900735244 /* AppDelegate.swift in Sources */,
 				46BCB90228EC7D2900735244 /* SceneDelegate.swift in Sources */,
+				4634CB80291414E300BF7841 /* Posts.swift in Sources */,
+				4634CB82291419D600BF7841 /* PostsTableViewController.swift in Sources */,
+				4634CB842914210100BF7841 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
