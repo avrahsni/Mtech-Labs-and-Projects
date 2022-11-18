@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46706FBB292684D5004BC3B4 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46706FBA292684D5004BC3B4 /* ToDoTableViewCell.swift */; };
 		4691A38D2922A6E700A45C25 /* AddToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691A38C2922A6E700A45C25 /* AddToDoTableViewController.swift */; };
 		4691A38F2922A89A00A45C25 /* ToDoDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4691A38E2922A89A00A45C25 /* ToDoDetailTableViewController.swift */; };
 		46DFDFC1291EA24900DEBAF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DFDFC0291EA24900DEBAF9 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46706FBA292684D5004BC3B4 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		4691A38C2922A6E700A45C25 /* AddToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoTableViewController.swift; sourceTree = "<group>"; };
 		4691A38E2922A89A00A45C25 /* ToDoDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetailTableViewController.swift; sourceTree = "<group>"; };
 		46DFDFBD291EA24900DEBAF9 /* List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = List.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 				46DFDFD6291EA61700DEBAF9 /* ToDoTableViewController.swift */,
 				4691A38E2922A89A00A45C25 /* ToDoDetailTableViewController.swift */,
 				4691A38C2922A6E700A45C25 /* AddToDoTableViewController.swift */,
+				46706FBA292684D5004BC3B4 /* ToDoTableViewCell.swift */,
 				46DFDFC6291EA24900DEBAF9 /* Main.storyboard */,
 				46DFDFC9291EA24B00DEBAF9 /* Assets.xcassets */,
 				46DFDFCB291EA24B00DEBAF9 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46706FBB292684D5004BC3B4 /* ToDoTableViewCell.swift in Sources */,
 				4691A38F2922A89A00A45C25 /* ToDoDetailTableViewController.swift in Sources */,
 				46DFDFD5291EA49600DEBAF9 /* ToDo.swift in Sources */,
 				46DFDFD7291EA61700DEBAF9 /* ToDoTableViewController.swift in Sources */,

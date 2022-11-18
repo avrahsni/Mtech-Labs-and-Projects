@@ -29,9 +29,23 @@ class ToDoDetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let currentDueDate: Date
+        
+        if let toDo = toDo {
+            navigationItem.title = "Edit To-Do"
+            titleTextField.text = toDo.title
+            isCompleteButton.isSelected = toDo.isComplete
+            currentDueDate = toDo.dueDate
+            notesTextView.text = toDo.notes
+        } else {
+            currentDueDate = Date().addingTimeInterval(60*60)
+        }
+        
         updateSaveButtonState()
-        dueDateDatePicker.date = Date().addingTimeInterval(60*60)
-        updateDueDateLabel(date: dueDateDatePicker.date)
+        dueDateDatePicker.date = currentDueDate
+        updateDueDateLabel(date: currentDueDate)
+        
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -96,51 +110,6 @@ class ToDoDetailTableViewController: UITableViewController {
         }
     }
     
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-    
     
     
     @IBAction func textEditingChanged(_ sender: Any) {
@@ -178,7 +147,17 @@ class ToDoDetailTableViewController: UITableViewController {
         let dueDate = dueDateDatePicker.date
         let notes = notesTextView.text
         
-        toDo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes)
+        
+        if toDo != nil {
+            toDo?.title = title
+            toDo?.isComplete = isComplete
+            toDo?.dueDate = dueDate
+            toDo?.notes = notes
+        } else {
+            toDo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes)
+        }
+        
+        
     }
     
     
