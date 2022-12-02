@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContestLab5_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email to enter the contest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUc-gq-mbY">
+                                <rect key="frame" x="16" y="207" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4t-Nc-cuc">
+                                <rect key="frame" x="8" y="268" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingDidBegin:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="k9B-1M-5ve"/>
+                                    <action selector="textFieldTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="5nk-cQ-x3x"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Er-7k-mkr">
+                                <rect key="frame" x="156" y="334" width="78" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQZ-G6-4ra"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LUc-gq-mbY" secondAttribute="trailing" constant="16" id="0GG-kj-bfw"/>
+                            <constraint firstItem="1Er-7k-mkr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DDw-HS-nhe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v4t-Nc-cuc" secondAttribute="trailing" constant="8" id="G0W-SC-Wjk"/>
+                            <constraint firstItem="LUc-gq-mbY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="IoW-uV-YJG"/>
+                            <constraint firstItem="v4t-Nc-cuc" firstAttribute="top" secondItem="LUc-gq-mbY" secondAttribute="bottom" constant="40" id="SDc-BH-uo0"/>
+                            <constraint firstItem="1Er-7k-mkr" firstAttribute="top" secondItem="v4t-Nc-cuc" secondAttribute="bottom" constant="32" id="US5-Of-eA1"/>
+                            <constraint firstItem="v4t-Nc-cuc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="UZO-Ud-iL1"/>
+                            <constraint firstItem="LUc-gq-mbY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="g4D-gK-uNJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="v4t-Nc-cuc" id="JJ2-x8-h1I"/>
+                        <segue destination="1EO-pC-un0" kind="show" identifier="emailSubmitted" id="heu-OQ-eKR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="-28"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UiX-yj-ia9">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="1EO-pC-un0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JRX-mk-lbw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have successfully been entered into the contest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVk-jx-rbi">
+                                <rect key="frame" x="8" y="246.99999999999997" width="374" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AHS-sD-VkP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XVk-jx-rbi" firstAttribute="leading" secondItem="AHS-sD-VkP" secondAttribute="leading" constant="8" id="Sqs-oP-77L"/>
+                            <constraint firstItem="XVk-jx-rbi" firstAttribute="top" secondItem="AHS-sD-VkP" secondAttribute="top" constant="200" id="buo-rf-h0W"/>
+                            <constraint firstItem="AHS-sD-VkP" firstAttribute="trailing" secondItem="XVk-jx-rbi" secondAttribute="trailing" constant="8" id="qa2-HN-nhp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Ub-Uu-nqU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5q-mU-k93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
