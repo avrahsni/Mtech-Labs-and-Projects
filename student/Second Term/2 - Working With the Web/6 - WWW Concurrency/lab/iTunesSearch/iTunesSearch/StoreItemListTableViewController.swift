@@ -8,8 +8,9 @@ class StoreItemListTableViewController: UITableViewController {
     @IBOutlet var filterSegmentedControl: UISegmentedControl!
     
     // add item controller property
+    let controller = StoreItemController()
     
-    var items = [String]()
+    var items = [StoreItem]()
     var imageLoadTasks: [IndexPath: Task<Void, Never>] = [:]
     
     let queryOptions = ["movie", "music", "software", "ebook"]
@@ -30,10 +31,28 @@ class StoreItemListTableViewController: UITableViewController {
         if !searchTerm.isEmpty {
             
             // set up query dictionary
+            let query = [
+                "term": searchTerm,
+                "media": mediaType,
+                "lang": "en_us",
+                "limit": "20"
+            ]
+            //"attribute": "authorTerm",
+            
             
             // use the item controller to fetch items
             // if successful, use the main queue to set self.items and reload the table view
             // otherwise, print an error to the console
+            Task {
+                do {
+                    self.items = try await controller.fetchItems(matching: query)
+                    print(items)
+                    tableView.reloadData()
+                }
+                catch {
+                    print(error)
+                }
+            }
         }
     }
     
@@ -42,16 +61,21 @@ class StoreItemListTableViewController: UITableViewController {
         let item = items[indexPath.row]
         
         // set cell.name to the item's name
-        
+        cell.name = item.name
         // set cell.artist to the item's artist
-        
+        cell.artist = item.artist
         // set cell.artworkImage to nil
-        
+        cell.artworkImage = nil
         // initialize a network task to fetch the item's artwork keeping track of the task
         // in imageLoadTasks so they can be cancelled if the cell will not be shown after
         // the task completes.
         //
         // if successful, set the cell.artworkImage using the returned image
+        
+        Task {
+            cell.artworkImage = try await controller.fetchImage(from: item.artworkURL)
+        }
+        
     }
     
     @IBAction func filterOptionUpdated(_ sender: UISegmentedControl) {
@@ -70,6 +94,7 @@ class StoreItemListTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Item", for: indexPath) as! ItemCell
         configure(cell: cell, forItemAt: indexPath)
+        
 
         return cell
     }
