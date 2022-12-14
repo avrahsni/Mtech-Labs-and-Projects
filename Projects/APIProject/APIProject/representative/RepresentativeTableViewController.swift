@@ -11,38 +11,94 @@ class RepresentativeTableViewController: UITableViewController {
     
     @IBOutlet weak var repSearchBar: UISearchBar!
     
+    var reps = [rep]()
+    let controller = RepresentativeInfoController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+    }
+    
+    func fetchRepresentatives() {
+        
+//        self.reps = []
+        self.tableView.reloadData()
+        
+        let searchTerm = repSearchBar.text ?? ""
+        
+        if !searchTerm.isEmpty {
+            
+            // set up query dictionary
+            let query = [
+                "zip": searchTerm,
+                "output": "json"
+            ]
+            //"attribute": "authorTerm",
+            
+            
+            // use the item controller to fetch items
+            // if successful, use the main queue to set self.items and reload the table view
+            // otherwise, print an error to the console
+            Task {
+                do {
+                    reps = try await controller.fetchRepData(matching: query)
+                    print(reps)
+                    print(reps.count)
+                    tableView.reloadData()
+                }
+                catch {
+                    print(error)
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return reps.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "repCell", for: indexPath) as! RepresentativeTableViewCell
+        configure(cell: cell, forItemAt: indexPath)
 
         // Configure the cell...
 
+
+
         return cell
     }
-    */
+    
+    func configure(cell: RepresentativeTableViewCell, forItemAt indexPath: IndexPath) {
+        
+        let rep = reps[indexPath.row]
+        
+        print(rep.state)
+        cell.repNameLabel.text = rep.name
+        cell.phoneNumberLabel.text = "Phone: \(rep.phone)"
+        cell.websiteLinkLabel.text = "Website: \(rep.link)"
+        if rep.link.contains("senate") {
+            cell.partyStateLabel.text = "Senate \(rep.party), \(rep.state)"
+        } else {
+            cell.partyStateLabel.text = "House \(rep.party), \(rep.state)"
+        }
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 185.0
+    }
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 185.0
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -89,4 +145,13 @@ class RepresentativeTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension RepresentativeTableViewController: UISearchBarDelegate {
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        fetchRepresentatives()
+        searchBar.resignFirstResponder()
+    }
 }

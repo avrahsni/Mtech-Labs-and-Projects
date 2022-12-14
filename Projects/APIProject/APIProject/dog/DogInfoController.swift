@@ -29,6 +29,7 @@ class DogInfoController: UIViewController {
         }
         
         let photoInfoObject = try JSONDecoder().decode(dog.self, from: data)
+        print("structure: \(photoInfoObject)\n")
         return photoInfoObject
         
     }

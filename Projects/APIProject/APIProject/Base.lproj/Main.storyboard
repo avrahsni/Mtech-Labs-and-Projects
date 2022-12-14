@@ -73,11 +73,11 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="136" id="g0H-ck-WWU" customClass="RepresentativeTableViewCell" customModule="APIProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="390" height="136"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="repCell" rowHeight="184" id="g0H-ck-WWU" customClass="RepresentativeTableViewCell" customModule="APIProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="390" height="184"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g0H-ck-WWU" id="Le2-ku-yOw">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="136"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="184"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burgess Owens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX4-NJ-z7a">
@@ -98,8 +98,16 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: 801-999-9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyw-q9-xfx">
+                                            <rect key="frame" x="36" y="143.33333333333334" width="174" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Lyw-q9-xfx" firstAttribute="leading" secondItem="Le2-ku-yOw" secondAttribute="leadingMargin" constant="16" id="14p-f8-EUy"/>
+                                        <constraint firstItem="Lyw-q9-xfx" firstAttribute="top" secondItem="DsZ-SK-vu3" secondAttribute="bottom" constant="16" id="BCY-wM-y8B"/>
                                         <constraint firstItem="DsZ-SK-vu3" firstAttribute="top" secondItem="Sds-qw-9PG" secondAttribute="bottom" constant="16" id="J8N-Cp-NTn"/>
                                         <constraint firstItem="Sds-qw-9PG" firstAttribute="top" secondItem="TX4-NJ-z7a" secondAttribute="bottom" constant="16" id="KhZ-aJ-8bc"/>
                                         <constraint firstItem="DsZ-SK-vu3" firstAttribute="leading" secondItem="Le2-ku-yOw" secondAttribute="leadingMargin" constant="16" id="bwZ-M0-OfR"/>
@@ -109,7 +117,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="partyStateLabel" destination="Sds-qw-9PG" id="fJO-JF-QD9"/>
+                                    <outlet property="phoneNumberLabel" destination="Lyw-q9-xfx" id="Y8l-Fu-i29"/>
                                     <outlet property="repNameLabel" destination="TX4-NJ-z7a" id="ftr-Pi-9AH"/>
+                                    <outlet property="websiteLinkLabel" destination="DsZ-SK-vu3" id="nyn-hr-j7l"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -125,7 +136,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIh-aK-DID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2588" y="-28"/>
+            <point key="canvasLocation" x="2587.6923076923076" y="-28.436018957345969"/>
         </scene>
         <!--Nobel-->
         <scene sceneID="jAd-q1-W3K">
