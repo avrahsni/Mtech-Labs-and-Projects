@@ -7,6 +7,13 @@
 
 import UIKit
 
-class ItemCollectionViewCell: UICollectionViewCell {
+class ItemCollectionViewCell: UICollectionViewCell, ItemDisplaying {
+    @IBOutlet weak var itemImageview: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    
+    
+    
+    
     
 }

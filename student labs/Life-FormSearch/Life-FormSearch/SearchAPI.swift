@@ -49,14 +49,12 @@ struct sendRequestTemplate {
 
 
 struct SearchAPIRequest: APIRequest {
-    var apiKey: String
     var searchTerm: String
     
     var urlRequest: URLRequest {
         var urlComponents = URLComponents(string: "https://eol.org/api/search/1.0.json")!
         urlComponents.queryItems = [
             URLQueryItem(name: "q", value: searchTerm)
-            /*URLQueryItem(name: "api_key", value: apiKey)*/
         ]
         
         return URLRequest(url: urlComponents.url!)

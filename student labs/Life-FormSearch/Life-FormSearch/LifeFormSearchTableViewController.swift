@@ -66,7 +66,7 @@ class LifeFormSearchTableViewController: UITableViewController {
 //            applyNewSnapshot(from: [])
             return
         }
-        let searchRequest = SearchAPIRequest(apiKey: "", searchTerm: searchString)
+        let searchRequest = SearchAPIRequest(searchTerm: searchString)
         Task {
             do {
                 let searchResults = try await sendRequest(searchRequest)
@@ -118,6 +118,7 @@ class LifeFormSearchTableViewController: UITableViewController {
         let cell = sender as! UITableViewCell
         // Pass the selected object to the new view controller.
         lfVC.lifeFormID = searchResultsArray[tableView.indexPathForSelectedRow!.row].id
+        lfVC.searchResult = searchResultsArray[tableView.indexPathForSelectedRow!.row].content
     }
     
     

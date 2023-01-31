@@ -12,13 +12,16 @@ class LifeFormViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var creatorNameLabel: UILabel!
     @IBOutlet weak var licenseLink: UILabel!
+    @IBOutlet weak var taxonSourceLinkLabel: UILabel!
+    @IBOutlet weak var scientificNameLabel: UILabel!
     
     var lifeFormID: Int = 46577088
-    var lifeFormTaxonArr = [taxonConcept]()
+    var lifeFormData = [EOLItemDetail?]()
+    var searchResult: String = ""
     
     
-//    init?(lifeFormID: Int, coder: NSCoder) {
-//        self.lifeFormID = lifeFormID
+//    init?(searchResult: String, coder: NSCoder) {
+//        self.searchResult = searchResult
 //        super.init(coder: coder)
 //    }
 //
@@ -28,30 +31,62 @@ class LifeFormViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = searchResult
+        imageView.image = UIImage(systemName: "exclamationmark.octagon")
+        if let image = fetchLifeForms() {
+            imageView.image = image
+        }
         
-        fetchLifeForms()
+        
 //        licenseLink.text = lifeFormTaxonArr[0].dataObjects?[0].license
     }
     
     
-    func fetchLifeForms() {
+    func fetchLifeForms() -> UIImage? {
         
         let pageRequest = PagesAPIRequest(id: String(lifeFormID), urlString: "https://eol.org/api/pages/1.0/\(lifeFormID).json")
+        
         Task {
             do {
+                print(lifeFormData.count)
                 let pageResults = try await sendRequestTemplate().sendRequest(pageRequest)
 //                print(pageResults.dataObjects![0].license)
-                lifeFormTaxonArr.append(pageResults)
-                print(lifeFormID)
-                print(lifeFormTaxonArr[0].taxonConcepts?.scientificName)
-                print(lifeFormTaxonArr[0].dataObjects?.eolMediaURL)
-//                print(searchResults.results[0].link)
-//                searchResultsArray = pageResults.results
-//                tableView.reloadData()
+                print(lifeFormData.count)
+                lifeFormData.append(pageResults ?? nil)
+                print(lifeFormData.count)
+                
+                creatorNameLabel.text = lifeFormData[0]?.details.dataObjects?[0].rightsHolder
+                licenseLink.text = lifeFormData[0]?.details.dataObjects?[0].license
+                scientificNameLabel.text = lifeFormData[0]?.details.scientificName
+                
+                
+                
+                return fetchImage()
             } catch {
                 print(error)
             }
+            return nil
         }
+        return nil
+    }
+    
+    func fetchImage() -> UIImage? {
+        print(lifeFormData.count)
+        let imageRequest = ImageAPIRequest(imageUrl: lifeFormData[0]?.details.dataObjects?[0].eolMediaURL?.absoluteString ?? "error error error")
+        print(imageRequest.imageUrl)
+        Task {
+            do {
+                let image = try await sendRequestTemplate().sendRequest(imageRequest)
+                imageView.backgroundColor = .clear
+                imageView.image = image
+                return image
+            } catch {
+                print("Error fetching image: \(error)")
+                return nil
+            }
+        }
+        
+        return nil
     }
     
 
