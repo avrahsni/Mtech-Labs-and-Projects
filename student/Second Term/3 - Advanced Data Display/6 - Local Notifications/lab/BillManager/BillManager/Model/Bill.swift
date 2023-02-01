@@ -11,6 +11,7 @@ struct Bill: Codable {
     var remindDate: Date?
     var notificationID: String?
     static var notificationCategoryID: String = "Reminder Notificaitons"
+//    var updatedBill = self
     
     init(id: UUID = UUID()) {
         self.id = id
@@ -25,4 +26,14 @@ extension Bill: Hashable {
 //    func hash(into hasher: inout Hasher) {
 //        hasher.combine(id)
 //    }
+    
+//    func scheduleReminder() {
+//        
+//    }
+    
+    
+    
+    
+    
+    
 }

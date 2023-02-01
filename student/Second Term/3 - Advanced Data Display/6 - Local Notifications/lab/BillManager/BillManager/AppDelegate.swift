@@ -24,6 +24,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UNUserNotificationCenter.current().delegate = self
         
         
+        func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+            let notificationID = response.notification.request.identifier
+            guard var bill = Database.shared.getBill(notificationID: notificationID) else { completionHandler(); return }
+            
+            switch response.actionIdentifier {
+            case remindActionID:
+                let newRemindDate = Date().addingTimeInterval(60 * 60)
+                
+                bill.scheduleReminders(on: newRemindDate) { updatedBill in
+                    Database.shared.updateAndSave(updatedBill)
+                }
+            case markAsPaidActionID:
+                bill.paidDate = Date()
+                Database.shared.updateAndSave(bill)
+            default:
+                break
+            }
+            completionHandler()
+        }
+        
+        
+        
         return true
     }
     
@@ -40,5 +62,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.list, .banner, .sound])
+    }
+    
+    
 }
 
