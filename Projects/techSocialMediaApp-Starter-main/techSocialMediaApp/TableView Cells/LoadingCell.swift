@@ -1,22 +1,16 @@
 //
-//  PostTableViewCell.swift
-//  Tech Social
+//  LoadingCell.swift
+//  techSocialMediaApp
 //
-//  Created by Snir Avrahami on 11/3/22.
+//  Created by Snir Avrahami on 2/15/23.
 //
 
 import UIKit
 
-class PostTableViewCell: UITableViewCell {
-    
-    
-    @IBOutlet weak var accountNameLabel: UILabel!
-    @IBOutlet weak var postImage: UIImageView!
-    @IBOutlet weak var postDescriptionText: UITextView!
-    
-    
-    
+class LoadingCell: UITableViewCell {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,5 +21,5 @@ class PostTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

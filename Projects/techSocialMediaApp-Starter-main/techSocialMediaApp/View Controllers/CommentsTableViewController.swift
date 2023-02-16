@@ -1,30 +1,46 @@
 //
-//  PostsTableViewController.swift
-//  Tech Social
+//  CommentsTableViewController.swift
+//  techSocialMediaApp
 //
-//  Created by Snir Avrahami on 11/3/22.
+//  Created by Snir Avrahami on 2/1/23.
 //
 
 import UIKit
 
-class PostsTableViewController: UITableViewController {
+class CommentsTableViewController: UITableViewController {
     
-    var posts = [Post]()
-    
-    
+    var comments = [Comment]()
+    var postid: Int = 0
+    var ogPoster: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        posts = Post.defaultPosts()
-        
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 440
+        getComments()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func getComments() {
+        Task {
+            do {
+                // Make the API Call
+//                print(User.current!.secret)
+                let commentsResponse = try await GetCommentsController().getComments(userSecret: User.current!.secret, postid: postid, pageNumber: 0)
+                
+                comments.append(contentsOf: commentsResponse)
+//                print(comments.count)
+                tableView.reloadData()
+                
+                
+            } catch {
+                print(error)
+//                errorLabel.text = "Invalid Username or Password"
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -36,25 +52,27 @@ class PostsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return posts.count
+        return comments.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
-        
-        let post = posts[indexPath.row]
-        cell.accountNameLabel.text = post.postAccount
-        cell.postImage.image = post.image
-//        cell.postDescriptionText.text = post.description
-        
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "commentsCell", for: indexPath) as! CommentTableViewCell
+
         // Configure the cell...
+        let comment = comments[indexPath.row]
+        cell.dateCreatedLabel.text = comment.createdDate
+        cell.commentBodyLabel.text = comment.body
+        cell.commenterUserNameLabel.text = comment.userName
+        cell.replyingToLabel.text = "Replying to \(ogPoster):"
 
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -100,4 +118,8 @@ class PostsTableViewController: UITableViewController {
     }
     */
 
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
 }
