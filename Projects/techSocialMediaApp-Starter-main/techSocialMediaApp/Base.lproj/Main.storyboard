@@ -114,7 +114,7 @@
             </objects>
             <point key="canvasLocation" x="1491" y="682"/>
         </scene>
-        <!--Posts-->
+        <!--Your Feed-->
         <scene sceneID="Czr-d1-3vE">
             <objects>
                 <tableViewController id="qfw-jT-J6A" customClass="PostsTableViewController" customModule="techSocialMediaApp" sceneMemberID="viewController">
@@ -233,7 +233,7 @@
                             <outlet property="delegate" destination="qfw-jT-J6A" id="ofQ-yO-fku"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Posts" id="HeZ-aN-ZWb">
+                    <navigationItem key="navigationItem" title="Your Feed" id="HeZ-aN-ZWb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cYh-Cm-8Sc">
                             <connections>
                                 <segue destination="6na-Li-dV1" kind="presentation" identifier="createPostSegue" id="r51-m5-YFl"/>
@@ -343,7 +343,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9y-5q-H3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="2209"/>
+            <point key="canvasLocation" x="2428" y="2185"/>
         </scene>
         <!--Comments Table View Controller-->
         <scene sceneID="JWy-SW-ECn">
@@ -454,7 +454,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUN-qg-kkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3552" y="1018"/>
+            <point key="canvasLocation" x="3508" y="1425"/>
         </scene>
         <!--Home-->
         <scene sceneID="a6t-yC-YAl">
@@ -509,7 +509,7 @@
                                     <constraint firstAttribute="height" constant="75" id="REq-Z6-Yqe"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                             </textView>
@@ -565,6 +565,7 @@
                                                             <buttonConfiguration key="configuration" style="plain" image="bubble.left.and.bubble.right" catalog="system" title="0"/>
                                                             <connections>
                                                                 <action selector="commentsButtonPressed:" destination="Bfm-WS-zkP" eventType="touchUpInside" id="WUV-if-Dhe"/>
+                                                                <segue destination="6na-Li-dV1" kind="presentation" identifier="createCommentSegue" id="4hX-J7-SPx"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKZ-q7-XE4">
@@ -574,6 +575,7 @@
                                                             <connections>
                                                                 <action selector="editButton:" destination="2Np-K2-xoW" eventType="touchUpInside" id="4YO-71-mJn"/>
                                                                 <action selector="editButtonPressed:" destination="2Np-K2-xoW" eventType="touchUpInside" id="Lil-4n-sm5"/>
+                                                                <segue destination="6na-Li-dV1" kind="presentation" identifier="editPostSegue" id="KDA-ba-x6c"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023-01-31" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bez-Mx-BoA">
@@ -611,6 +613,7 @@
                                         <connections>
                                             <outlet property="commentsButton" destination="q9Z-Tn-mKn" id="OYJ-3V-Sz5"/>
                                             <outlet property="dateCreatedLabel" destination="bez-Mx-BoA" id="5Dn-fn-cCd"/>
+                                            <outlet property="editButton" destination="UKZ-q7-XE4" id="QbJ-aX-lsx"/>
                                             <outlet property="likeButton" destination="Zgr-Ue-BUQ" id="aYg-p3-E8R"/>
                                             <outlet property="postBodyLabel" destination="Xt0-6J-WxJ" id="PjS-re-cqY"/>
                                             <outlet property="postTitleLabel" destination="fOW-5p-txY" id="JDt-Sw-Mtf"/>
@@ -620,14 +623,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tech Interests: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9pw-gF-4Mg">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tech Interests: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9pw-gF-4Mg">
                                 <rect key="frame" x="16" y="312" width="358" height="75"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="7Dk-JT-v2A"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Posts:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4Y-Ua-KsN">
@@ -642,13 +645,21 @@
                                 <buttonConfiguration key="configuration" style="plain" image="square.and.pencil" catalog="system"/>
                                 <connections>
                                     <action selector="editProfileButtonPressed:" destination="7dc-w0-fG4" eventType="touchUpInside" id="chz-Pb-2ye"/>
+                                    <segue destination="Q4X-44-ym9" kind="presentation" identifier="editProfileSegue" id="4c2-om-R8l"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-Fp-gdk">
+                                <rect key="frame" x="149.33333333333337" y="197" width="224.66666666666663" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XHm-7T-pf0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9pw-gF-4Mg" firstAttribute="leading" secondItem="XHm-7T-pf0" secondAttribute="leading" constant="16" id="15b-gX-bOq"/>
+                            <constraint firstItem="fzQ-h9-1Nj" firstAttribute="top" secondItem="Acb-Fp-gdk" secondAttribute="bottom" constant="8" id="3FK-DK-nL0"/>
                             <constraint firstItem="hSk-Tj-7kY" firstAttribute="centerX" secondItem="g0s-tL-m3m" secondAttribute="centerX" id="5so-JE-y6h"/>
                             <constraint firstItem="XHm-7T-pf0" firstAttribute="trailing" secondItem="mYZ-Sw-R6n" secondAttribute="trailing" constant="24" id="9OH-Q8-elt"/>
                             <constraint firstItem="upv-qX-6Sd" firstAttribute="leading" secondItem="XHm-7T-pf0" secondAttribute="leading" constant="8" id="AdX-MO-nBf"/>
@@ -656,12 +667,15 @@
                             <constraint firstItem="fzQ-h9-1Nj" firstAttribute="leading" secondItem="XHm-7T-pf0" secondAttribute="leading" constant="16" id="D3y-cq-GZX"/>
                             <constraint firstItem="upv-qX-6Sd" firstAttribute="top" secondItem="P4Y-Ua-KsN" secondAttribute="bottom" constant="8" id="DA1-xi-x1V"/>
                             <constraint firstItem="XHm-7T-pf0" firstAttribute="trailing" secondItem="upv-qX-6Sd" secondAttribute="trailing" constant="8" id="EfR-YW-gdX"/>
+                            <constraint firstItem="Acb-Fp-gdk" firstAttribute="leading" secondItem="8Qb-3E-v1t" secondAttribute="trailing" constant="24" id="G51-Oo-dPL"/>
                             <constraint firstItem="8Qb-3E-v1t" firstAttribute="top" secondItem="MNJ-i9-omo" secondAttribute="bottom" id="IbV-az-hH3"/>
                             <constraint firstItem="hSk-Tj-7kY" firstAttribute="top" secondItem="g0s-tL-m3m" secondAttribute="topMargin" constant="-47" id="IsN-cI-wKU"/>
+                            <constraint firstItem="XHm-7T-pf0" firstAttribute="trailing" secondItem="Acb-Fp-gdk" secondAttribute="trailing" constant="16" id="It3-EK-bS0"/>
                             <constraint firstItem="8Qb-3E-v1t" firstAttribute="centerX" secondItem="MNJ-i9-omo" secondAttribute="centerX" id="JuC-Hj-aVb"/>
                             <constraint firstItem="mYZ-Sw-R6n" firstAttribute="top" secondItem="hSk-Tj-7kY" secondAttribute="bottom" constant="24" id="Mom-JB-7l1"/>
                             <constraint firstItem="XHm-7T-pf0" firstAttribute="trailing" secondItem="9pw-gF-4Mg" secondAttribute="trailing" constant="16" id="Ome-Ke-dml"/>
                             <constraint firstItem="XHm-7T-pf0" firstAttribute="bottom" secondItem="upv-qX-6Sd" secondAttribute="bottom" id="TTs-u6-n8W"/>
+                            <constraint firstItem="Acb-Fp-gdk" firstAttribute="height" secondItem="8Qb-3E-v1t" secondAttribute="height" id="ToJ-R0-PNw"/>
                             <constraint firstItem="fzQ-h9-1Nj" firstAttribute="top" secondItem="8Qb-3E-v1t" secondAttribute="bottom" constant="8" id="Vbg-ly-UQ1"/>
                             <constraint firstItem="8Qb-3E-v1t" firstAttribute="top" secondItem="hSk-Tj-7kY" secondAttribute="bottom" constant="65" id="Vcr-T4-DxN"/>
                             <constraint firstItem="XHm-7T-pf0" firstAttribute="trailing" secondItem="fzQ-h9-1Nj" secondAttribute="trailing" constant="16" id="bsP-y9-jSC"/>
@@ -678,6 +692,7 @@
                     <navigationItem key="navigationItem" id="hpo-BL-EVo"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="atLabel" destination="Acb-Fp-gdk" id="I6s-Gd-34o"/>
                         <outlet property="bioTextView" destination="fzQ-h9-1Nj" id="W6K-EG-5o0"/>
                         <outlet property="postsTableView" destination="upv-qX-6Sd" id="6Ee-KL-FBo"/>
                         <outlet property="profileImage" destination="MNJ-i9-omo" id="oTX-NW-jvu"/>
@@ -692,10 +707,130 @@
             </objects>
             <point key="canvasLocation" x="2401.5384615384614" y="682.46445497630327"/>
         </scene>
+        <!--Edit Profile Table View Controller-->
+        <scene sceneID="83E-Bv-UTH">
+            <objects>
+                <tableViewController id="Q4X-44-ym9" customClass="EditProfileTableViewController" customModule="techSocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ate-QW-dNh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="kVK-Xy-hsl">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Edit Profile" id="e4U-6C-oos">
+                                    <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="XQT-hf-7kM">
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="Q4X-44-ym9" id="3pD-zK-RGe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="Post" image="square.and.pencil" catalog="system" id="iaR-VL-teG">
+                                        <connections>
+                                            <action selector="editButtonPressed:" destination="Q4X-44-ym9" id="dND-eI-SCJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <sections>
+                            <tableViewSection headerTitle="Username:" id="55F-ga-fwk">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="K2j-fz-pS3">
+                                        <rect key="frame" x="0.0" y="94" width="390" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K2j-fz-pS3" id="7AG-TK-ZAh">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ReL-Xt-ViH">
+                                                    <rect key="frame" x="28" y="19" width="334" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ReL-Xt-ViH" firstAttribute="top" secondItem="7AG-TK-ZAh" secondAttribute="topMargin" constant="8" id="iyC-sj-zIq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ReL-Xt-ViH" secondAttribute="trailing" constant="8" id="roD-Tn-zht"/>
+                                                <constraint firstItem="ReL-Xt-ViH" firstAttribute="leading" secondItem="7AG-TK-ZAh" secondAttribute="leadingMargin" constant="8" id="z0C-2S-UyS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Bio:" id="fQh-pg-YdV">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="rt1-Sd-n50">
+                                        <rect key="frame" x="0.0" y="247" width="390" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rt1-Sd-n50" id="8f9-cv-jRX">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="What do you want share about yourself?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uPs-da-iL2">
+                                                    <rect key="frame" x="28" y="19" width="334" height="162"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uPs-da-iL2" firstAttribute="leading" secondItem="8f9-cv-jRX" secondAttribute="leadingMargin" constant="8" id="EFf-Xb-byC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uPs-da-iL2" secondAttribute="trailing" constant="8" id="FNo-hf-nwt"/>
+                                                <constraint firstItem="uPs-da-iL2" firstAttribute="top" secondItem="8f9-cv-jRX" secondAttribute="topMargin" constant="8" id="YMz-Lg-FYJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uPs-da-iL2" secondAttribute="bottom" constant="8" id="k4y-ZB-vkr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Tech Interests:" id="Q7J-3g-hTQ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="r0N-LX-wwx">
+                                        <rect key="frame" x="0.0" y="525" width="390" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r0N-LX-wwx" id="R72-PF-QpM">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="What are your tech interests?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C1J-rR-Q8v">
+                                                    <rect key="frame" x="28" y="19" width="334" height="162"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="C1J-rR-Q8v" firstAttribute="leading" secondItem="R72-PF-QpM" secondAttribute="leadingMargin" constant="8" id="I9d-JV-I0y"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="C1J-rR-Q8v" secondAttribute="bottom" constant="8" id="Spj-hQ-BCg"/>
+                                                <constraint firstItem="C1J-rR-Q8v" firstAttribute="top" secondItem="R72-PF-QpM" secondAttribute="topMargin" constant="8" id="qRy-u9-cZt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="C1J-rR-Q8v" secondAttribute="trailing" constant="8" id="s0n-CN-4Zd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Q4X-44-ym9" id="wgW-qG-qmX"/>
+                            <outlet property="delegate" destination="Q4X-44-ym9" id="6J8-Je-eEn"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="bioTextView" destination="uPs-da-iL2" id="d5Y-EA-Ilw"/>
+                        <outlet property="navigationBar" destination="kVK-Xy-hsl" id="z6F-gV-F5v"/>
+                        <outlet property="techInterestsTextView" destination="C1J-rR-Q8v" id="eh0-g5-AxW"/>
+                        <outlet property="usernameTextField" destination="ReL-Xt-ViH" id="luo-md-2eS"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sT4-tB-7KX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3507.6923076923076" y="681.75355450236964"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="JGN-Iw-jrv"/>
-        <segue reference="s5Y-Dr-ENN"/>
+        <segue reference="KDA-ba-x6c"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Italy-Amalfi-Coast-landscape" width="800" height="519"/>

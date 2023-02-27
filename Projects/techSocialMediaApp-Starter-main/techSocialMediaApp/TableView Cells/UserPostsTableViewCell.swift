@@ -16,6 +16,7 @@ class UserPostsTableViewCell: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var commentsButton: UIButton!
     @IBOutlet weak var trashButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
     
     var commentsNum: [Int] = [0]
     var likesNum: [Int] = [0]

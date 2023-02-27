@@ -26,7 +26,7 @@ class PostsTableViewController: UITableViewController, ConfirmDeletionAlertDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
-        
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "pull to refresh")
 //        updateUI()
     }
     
@@ -121,7 +121,7 @@ class PostsTableViewController: UITableViewController, ConfirmDeletionAlertDeleg
                 print(postsResponse.count)
                 posts.removeAll()
                 self.posts.append(contentsOf: postsResponse)
-                navigationItem.title = "\(posts.count)"
+//                navigationItem.title = "\(posts.count)"
                 tableView.reloadData()
                 pageNum += 1
                 

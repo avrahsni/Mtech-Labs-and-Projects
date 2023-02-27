@@ -14,8 +14,10 @@
 		46199C69298B686800D1C1A2 /* MakeCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46199C68298B686800D1C1A2 /* MakeCommentController.swift */; };
 		46199C6B298C163100D1C1A2 /* DeletePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46199C6A298C163100D1C1A2 /* DeletePostController.swift */; };
 		46199C6D298D749400D1C1A2 /* UpdateLikesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46199C6C298D749400D1C1A2 /* UpdateLikesController.swift */; };
+		4637D88C299EDC3D00E41B4E /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637D88B299EDC3D00E41B4E /* EditProfileController.swift */; };
 		463BF026299D40F900BDE99E /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463BF024299D40F900BDE99E /* LoadingCell.swift */; };
 		463BF027299D40F900BDE99E /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 463BF025299D40F900BDE99E /* LoadingCell.xib */; };
+		463BF029299E9B9D00BDE99E /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463BF028299E9B9D00BDE99E /* EditProfileTableViewController.swift */; };
 		466FB3D1298ABF8F00D2C551 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466FB3D0298ABF8F00D2C551 /* Post.swift */; };
 		466FB3D3298ABF9800D2C551 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466FB3D2298ABF9800D2C551 /* Profile.swift */; };
 		466FB3D5298AC12A00D2C551 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466FB3D4298AC12A00D2C551 /* PostsTableViewController.swift */; };
@@ -46,8 +48,10 @@
 		46199C68298B686800D1C1A2 /* MakeCommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeCommentController.swift; sourceTree = "<group>"; };
 		46199C6A298C163100D1C1A2 /* DeletePostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePostController.swift; sourceTree = "<group>"; };
 		46199C6C298D749400D1C1A2 /* UpdateLikesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateLikesController.swift; sourceTree = "<group>"; };
+		4637D88B299EDC3D00E41B4E /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		463BF024299D40F900BDE99E /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		463BF025299D40F900BDE99E /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		463BF028299E9B9D00BDE99E /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		466FB3D0298ABF8F00D2C551 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		466FB3D2298ABF9800D2C551 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		466FB3D4298AC12A00D2C551 /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				466FB3D4298AC12A00D2C551 /* PostsTableViewController.swift */,
 				46199C62298B50A800D1C1A2 /* CreatePostTableViewController.swift */,
 				46199C64298B5D6E00D1C1A2 /* ProfileViewController.swift */,
+				463BF028299E9B9D00BDE99E /* EditProfileTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 				46199C6A298C163100D1C1A2 /* DeletePostController.swift */,
 				46199C6C298D749400D1C1A2 /* UpdateLikesController.swift */,
 				46BFA2242992A7DA00DDA982 /* EditPostController.swift */,
+				4637D88B299EDC3D00E41B4E /* EditProfileController.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -246,6 +252,7 @@
 			files = (
 				466FB3E2298B20DB00D2C551 /* GetCommentsController.swift in Sources */,
 				46199C6B298C163100D1C1A2 /* DeletePostController.swift in Sources */,
+				4637D88C299EDC3D00E41B4E /* EditProfileController.swift in Sources */,
 				A3C2D4CD2908297000C0AF5F /* User.swift in Sources */,
 				46BFA2252992A7DA00DDA982 /* EditPostController.swift in Sources */,
 				466FB3DB298AC1E900D2C551 /* GetPostsController.swift in Sources */,
@@ -255,6 +262,7 @@
 				46BFA223298DEB1800DDA982 /* UserPostsTableViewCell.swift in Sources */,
 				46199C65298B5D6E00D1C1A2 /* ProfileViewController.swift in Sources */,
 				46199C63298B50A800D1C1A2 /* CreatePostTableViewController.swift in Sources */,
+				463BF029299E9B9D00BDE99E /* EditProfileTableViewController.swift in Sources */,
 				466FB3D5298AC12A00D2C551 /* PostsTableViewController.swift in Sources */,
 				466FB3E4298B224200D2C551 /* CommentTableViewCell.swift in Sources */,
 				A3C2D4CF29082B1300C0AF5F /* AuthenticationController.swift in Sources */,

@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var bioTextView: UITextView!
     @IBOutlet weak var techInterestsTextView: UITextView!
+    @IBOutlet weak var atLabel: UILabel!
     
     @IBOutlet weak var postsTableView: UITableView!
     
@@ -21,6 +22,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     var userProfile = UserProfile(firstName: "", lastName: "", userName: "", userUUID: UUID(), posts: [Post]())
     
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +37,18 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         maskUserCircle()
         loadTopImage()
         
-        postsTableView.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        postsTableView.addSubview(refreshControl)
+        
+//        postsTableView.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         
         // Do any additional setup after loading the view.
     }
     
     @objc func refresh() {
         updateUI()
-        postsTableView.refreshControl?.endRefreshing()
+        refreshControl.endRefreshing()
     }
     
     func maskUserCircle() {
@@ -60,9 +66,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func loadInfo() {
-        userNameLabel.text = userProfile.userName
-        bioTextView.text = "Bio: \(userProfile.bio ?? "")"
-        techInterestsTextView.text = "Tech Interests: \(userProfile.techInterests ?? "")"
+        userNameLabel.text = "\(userProfile.firstName) \(userProfile.lastName)"
+        atLabel.text = "@\(userProfile.userName)"
+//        bioTextView.font = UIFont(name: atLabel.font!.fontName, size: 16)
+        bioTextView.text = "Bio: \n\(userProfile.bio ?? "")"
+//        techInterestsTextView.font = UIFont(name: atLabel.font!.fontName, size: 16)
+        techInterestsTextView.text = "Tech Interests: \n\(userProfile.techInterests ?? "")"
     }
     
     func updateCell(_ cell: UITableViewCell) {
@@ -200,6 +209,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.loadLikeAndCommentNum()
         
         cell.commentsButton.tag = indexPath.row
+        cell.editButton.tag = indexPath.row
         
 //        postsTableView.reloadData()
 //        tableView.reloadData()
@@ -223,6 +233,35 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             
             commentsVC.postid = userProfile.posts[postsTableView.indexPathForSelectedRow!.row].postid
             commentsVC.ogPoster = userProfile.posts[postsTableView.indexPathForSelectedRow!.row].authorUserName
+        case "editProfileSegue":
+            let editVC = segue.destination as! EditProfileTableViewController
+            
+            editVC.delegate = self
+            editVC.user = self.userProfile
+        case "createCommentSegue":
+            let button = sender as! UIButton
+            let indexPathRow = button.tag
+            
+            let commentsVC = segue.destination as! CreatePostTableViewController
+            
+            commentsVC.postUsername = userProfile.posts[indexPathRow].authorUserName
+            commentsVC.isComment = true
+            commentsVC.postid = userProfile.posts[indexPathRow].postid
+            commentsVC.delegate = self
+        case "editPostSegue":
+            let button = sender as! UIButton
+            let indexPathRow = button.tag
+            
+            let editVC = segue.destination as! CreatePostTableViewController
+            
+//            editVC.post.removeFirst(1)
+            editVC.post.append(userProfile.posts[indexPathRow])
+//            editVC.post = posts[indexPathRow]
+            editVC.postid = userProfile.posts[indexPathRow].postid
+//            print(posts[indexPathRow].postid)
+            editVC.isComment = false
+            editVC.isEdit = true
+            editVC.delegate = self
         default:
             break
         }
