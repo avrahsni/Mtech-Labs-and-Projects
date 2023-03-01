@@ -39,133 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9746E0D4-4409-47E7-9417-E6089A262F81"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Interview Prep Code Challenge 2/UsersViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "addUser(_:_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9746E0D4-4409-47E7-9417-E6089A262F81 - 49f2e70d1996115a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Interview_Prep_Code_Challenge_2.UsersViewController.addUser(Swift.Int, Swift.Array&lt;Swift.Bool&gt;) -&gt; ()"
-                  moduleName = "Interview Prep Code Challenge 2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sniravrahami/Desktop/Labs%20&amp;%20Projects/Interview%20Code%20Challenges/Interview%20Prep%20Code%20Challenge%202/Interview%20Prep%20Code%20Challenge%202/UsersViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "9746E0D4-4409-47E7-9417-E6089A262F81 - 9e14bb89be223c84"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable () async -&gt; () in Interview_Prep_Code_Challenge_2.UsersViewController.addUser(Swift.Int, Swift.Array&lt;Swift.Bool&gt;) -&gt; ()"
-                  moduleName = "Interview Prep Code Challenge 2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sniravrahami/Desktop/Labs%20&amp;%20Projects/Interview%20Code%20Challenges/Interview%20Prep%20Code%20Challenge%202/Interview%20Prep%20Code%20Challenge%202/UsersViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "0">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "121432CB-6CB4-4E14-9D3C-BB55D348B72B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Interview Prep Code Challenge 2/UsersViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "addUser(_:_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "121432CB-6CB4-4E14-9D3C-BB55D348B72B - 707dd8cead0bd9c6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Interview_Prep_Code_Challenge_2.UsersViewController.addUser(Swift.Int, Swift.Array&lt;Swift.Bool&gt;) -&gt; ()"
-                  moduleName = "Interview Prep Code Challenge 2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sniravrahami/Desktop/Labs%20&amp;%20Projects/Interview%20Code%20Challenges/Interview%20Prep%20Code%20Challenge%202/Interview%20Prep%20Code%20Challenge%202/UsersViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "520">
-               </Location>
-               <Location
-                  uuid = "121432CB-6CB4-4E14-9D3C-BB55D348B72B - 8bbe8876d8283bc9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Interview_Prep_Code_Challenge_2.UsersViewController.addUser(Swift.Int, Swift.Array&lt;Swift.Bool&gt;) -&gt; ()"
-                  moduleName = "Interview Prep Code Challenge 2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sniravrahami/Desktop/Labs%20&amp;%20Projects/Interview%20Code%20Challenges/Interview%20Prep%20Code%20Challenge%202/Interview%20Prep%20Code%20Challenge%202/UsersViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "121432CB-6CB4-4E14-9D3C-BB55D348B72B - 8bbe8876d8283bc9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Interview_Prep_Code_Challenge_2.UsersViewController.addUser(Swift.Int, Swift.Array&lt;Swift.Bool&gt;) -&gt; ()"
-                  moduleName = "Interview Prep Code Challenge 2"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sniravrahami/Desktop/Labs%20&amp;%20Projects/Interview%20Code%20Challenges/Interview%20Prep%20Code%20Challenge%202/Interview%20Prep%20Code%20Challenge%202/UsersViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "132">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FCF74A9B-E41E-4331-B270-227488C776B0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Interview Prep Code Challenge 2/UsersViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "addUser(_:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "EA611407-B515-46C6-B962-AC7EE08B3B68"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -208,6 +81,102 @@
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "getUsers(amount:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "369D55A5-7D98-437A-BAB3-1274DE750CE3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Interview Prep Code Challenge 2/View Controllers/UsersViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74D34979-51F0-47C8-A0CC-D0C056662C22"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Interview Prep Code Challenge 2/View Controllers/UsersViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "loadImagesFromFile(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3BECB1BD-D5CE-4A35-AD9C-32970A0A3B50"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Interview Prep Code Challenge 2/View Controllers/AddUserTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "buttonToggled(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0995EE93-74F2-435D-A1D0-3C344835E7E7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Interview Prep Code Challenge 2/View Controllers/AddUserTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "buttonToggled(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1766396C-C772-4C94-948E-620180823F41"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Interview Prep Code Challenge 2/View Controllers/DetailSettingsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A04571F-1231-4ECD-A716-B2E200B917FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Interview Prep Code Challenge 2/View Controllers/DetailSettingsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

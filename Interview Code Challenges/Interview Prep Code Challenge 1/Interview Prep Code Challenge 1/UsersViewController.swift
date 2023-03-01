@@ -58,7 +58,7 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: 250, height: 300))
         pickerView.delegate = self
         pickerView.dataSource = self
-        pickerView.selectRow(0, inComponent: 0, animated: true)
+        pickerView.selectRow(0, inComponent: 0,animated: true)
         vc.view.addSubview(pickerView)
         let randomAlert = UIAlertController(title: "Confirmation", message: "How many random users do you want to choose?", preferredStyle: UIAlertController.Style.alert)
         randomAlert.setValue(vc, forKey: "contentViewController")
@@ -148,15 +148,15 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if segue.identifier == "addUserSegue" {
             let navVC = segue.destination as! UINavigationController
-            let VC = navVC.topViewController as! AddUserTableViewController
+            let vc = navVC.topViewController as! AddUserTableViewController
             
-            VC.delegate = self
+            vc.delegate = self
         }
         if segue.identifier == "showRandomSegue" {
             let navVC = segue.destination as! UINavigationController
-            let VC = navVC.topViewController as! ResultsTableViewController
+            let vc = navVC.topViewController as! ResultsTableViewController
             
-            VC.results = results
+            vc.results = results
             results.removeAll()
         }
     }

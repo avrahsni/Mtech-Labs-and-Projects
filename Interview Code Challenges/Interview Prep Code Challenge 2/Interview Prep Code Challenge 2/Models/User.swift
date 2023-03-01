@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct User: Codable, Equatable {
     
@@ -21,6 +22,7 @@ struct User: Codable, Equatable {
     var cell: String
     var id: Identification
     var nat: String
+    
     
     
     static func == (lhs: User, rhs: User) -> Bool {
@@ -71,7 +73,7 @@ struct Location: Codable {
     var city: String
     var state: String
     var country: String
-    var postcode: String
+//    var postcode: Int?
     var coordinates: Coordinates
     var timezone: Timezone
 }
@@ -110,7 +112,12 @@ struct Registered: Codable {
 
 struct Identification: Codable {
     var name: String
-    var value: String
+    var value: String?
+}
+
+struct Response: Codable {
+    var results: [User]
 }
 
 let documentsDirectory: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+

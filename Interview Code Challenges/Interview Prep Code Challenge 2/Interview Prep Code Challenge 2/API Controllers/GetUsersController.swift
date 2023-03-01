@@ -20,10 +20,11 @@ class GetUsersController {
         var urlComponents = URLComponents(string: "\(API.url)")!
         
         // Add the query items
-        
-        urlComponents.queryItems = [
-            URLQueryItem(name: "results", value: "\(amount)")
-        ]
+        if amount > 1 {
+            urlComponents.queryItems = [
+                URLQueryItem(name: "results", value: "\(amount)")
+            ]
+        }
         
         var request = URLRequest(url: urlComponents.url!)
         
@@ -42,8 +43,9 @@ class GetUsersController {
         
         // Decode our response data to a usable User struct
         let decoder = JSONDecoder()
-        let users = try decoder.decode([User].self, from: data)
+        let usersResponse = try decoder.decode(Response.self, from: data)
         
+        let users = usersResponse.results
         
         return users
     }
